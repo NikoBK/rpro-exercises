@@ -1,5 +1,5 @@
 /*
-   Excercise01.ino
+   excercise1.ino
 
     Created on: Oct 3, 2022,
     Author: Nikolaj Krebs
