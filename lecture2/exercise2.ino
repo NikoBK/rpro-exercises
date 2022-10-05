@@ -1,9 +1,9 @@
 /*
-   notes.ino
+   exercise2.ino
 
     Created on: Oct 5, 2022,
     Author: Nikolaj Krebs,
-    Course 02, Exercise 2 - Strings, Friday Sep. 23
+    Lecture 2, Exercise 2 - Strings, Friday Sep. 23
 */ 
 
 String nameString = "Zumo"; // Strings use " because a string is multiple chars pieced together :)

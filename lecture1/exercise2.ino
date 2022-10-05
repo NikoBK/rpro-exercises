@@ -3,7 +3,7 @@
 
     Created on: Oct 3, 2022,
     Author: Nikolaj Krebs,
-    Course 01, Exercise 2 - LED Carousel, Friday Sep. 16
+    Lecture 1, Exercise 2 - LED Carousel, Friday Sep. 16
 */ 
 
 int onTimeMS = 2000; // How long each LED is on (in milliseconds). Set to 2 seconds.

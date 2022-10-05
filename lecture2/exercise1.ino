@@ -1,9 +1,9 @@
 /*
-   notes.ino
+   exercise1.ino
 
     Created on: Oct 5, 2022,
     Author: Nikolaj Krebs,
-    Course 02, Exercise 1 - Operation with variables, Friday Sep. 23
+    Lecture 2, Exercise 1 - Operation with variables, Friday Sep. 23
 */ 
 
 int var1 = 10;

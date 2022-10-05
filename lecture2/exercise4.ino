@@ -1,9 +1,9 @@
 /*
-   notes.ino
+   exercise4.ino
 
     Created on: Oct 5, 2022,
     Author: Nikolaj Krebs,
-    Course 02, Exercise 4 - if-else, Friday Sep. 23
+    Lecture 2, Exercise 4 - if-else, Friday Sep. 23
 */ 
 
 int randomMinimum = 0; // The smallest random number we can get.

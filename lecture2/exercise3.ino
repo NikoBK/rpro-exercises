@@ -1,9 +1,9 @@
 /*
-   notes.ino
+   exercise3.ino
 
     Created on: Oct 5, 2022,
     Author: Nikolaj Krebs,
-    Course 02, Exercise 3 - Random numbers, Friday Sep. 23
+    Lecture 2, Exercise 3 - Random numbers, Friday Sep. 23
 */ 
 
 int randomMinimum = 200; // The smallest random number we can get.
