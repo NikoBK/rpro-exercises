@@ -1,65 +1,55 @@
 /*
    notes.ino
 
-    Created on: Sep 9, 2022,
-    Author: Nikolaj Krebs
+    Created on: Oct 5, 2022,
+    Author: Nikolaj Krebs,
+    Course 02, Exercise 1 - Operation with variables, Friday Sep. 23
 */ 
 
-// This is called a definition and it can only be the value it is assigned here.
-// This means you cannot change it in your code, only use it.
-#define calculateDelay 500
-#define loopEndDelay 2500
+int var1 = 10;
+int var2 = 2;
 
-// 'int' is the variable's datatype
-// 'intValue1' is the variable
-// and = -2; is the variable's value.
-int intValue1 = -2;
-int intValue2 = 10;
+// Note that the datatype 'int' is only declared once here because all these variables
+// are all ints with no predefined values. We will change these variable values in the code
+// during runtime.
+int addition, subtraction, multiplication, division;
 
-// Floats are used to store decimal numeric values (to a certain extend)
-float floatValue1 = 1.2346;
-float floatValue2 = -3.21426;
+void setup() 
+{
+  // Initialize the serial port:
+  Serial.begin(9600); // 9600 is the frequency for the serial monitor.
 
-// Strings are an assembly of the datatype char to make out a word, sentence or more.
-String stringValue1 = "hello";
-String stringValue2 = "there";
-
-// Double is a float but with allowance for more decimals
-double doubleValue1 = 1.234624124;
-double doubleValue2 = -3.21426;
-
-// This only ever runs in your arduino once, on startup.
-void setup() {
-  Serial.begin(9600);
+  addition = var1 + var2;
+  subtraction = var1 - var2; // Remember to subtract biggest from smallest. var2 - var1 yields a negative value and var1 - var2 positive.
+  multiplication = var1 * var2;
+  division = var1 / var2; // Do not divide by 0. Same rules apply here as in math.
 }
 
-void loop() {
-  String hellothere = stringValue1 + " " + stringValue2; // Output: hellothere = "hello there";
+void loop() 
+{
+  // Prints all the calculated sums and products on the serial monitor
+  Serial.println("Hello I am Zumo, these are my variables:"); // Our greetings string :)
 
-  Serial.println("Addition of value 1 and value 2 (int): " + (String)intValue1 + " + " + (String)intValue2 + " = " + (String)(intValue1 + intValue2));
-  // Addition of value 1 and value 2 (int): -2 + 10 = 8
-  // (String) WITH the parentheses is called casting to a datatype
-  // (String) = casting to string
-  // (Float) = casting to float
-  // Etc.
+  // Print the var1 and var2 values:
+  Serial.println("var1:");
+  Serial.println(var1);
+  Serial.println("var2:");
+  Serial.println(var2);
 
-  delay(calculateDelay); // 1000ms = 1 sec
+  // Print the addition, subtraction, multiplication & division values:
+  Serial.println("addition:");
+  Serial.println(addition);
 
-  Serial.println("Subtraction of value 1 and value 2 (int): " + (String)intValue1 + " - " + (String)intValue2 + " = " + (String)(intValue1 - intValue2));
-  // +, -, *, /, etc. is called "operators"
-  delay(calculateDelay);
+  Serial.println("subtraction:");
+  Serial.println(subtraction);
 
-  Serial.println("Multiplication of value 1 and value 2 (int): " + (String)intValue1 + " * " + (String)intValue2 + " = " + (String)(intValue1 * intValue2));
-  delay(calculateDelay);
+  Serial.println("multiplication:");
+  Serial.println(multiplication);
 
-  Serial.println("Division of value 1 and value 2 (float): " + (String)floatValue1 + " / " + (String)floatValue2 + " = " + (String)(floatValue1 / floatValue2));
-  delay(calculateDelay);
+  Serial.println("division:");
+  Serial.println(division);
 
-  Serial.println("Division of value 1 and value 2 (double): " + (String)doubleValue1 + " / " + (String)doubleValue2 + " = " + (String)(doubleValue1 / doubleValue2));
-  delay(calculateDelay);
-  
-  Serial.println("Multiplication of value 1 and value 2 (float): " + (String)floatValue1 + " * " + (String)floatValue2 + " = " + (String)(floatValue1 * floatValue2));
-  
-
-  delay(loopEndDelay);
+  // Print the closer text, that indicates where the loop stops.
+  Serial.println("------- I will send the variables again each 10 seconds -------");
+  delay(10000); // Wait 10 seconds before restarting the loop.
 }

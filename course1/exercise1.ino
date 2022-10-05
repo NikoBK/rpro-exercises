@@ -2,7 +2,8 @@
    exercise1.ino
 
     Created on: Oct 3, 2022,
-    Author: Nikolaj Krebs
+    Author: Nikolaj Krebs,
+    Course 01, Exercise 1 - Arduino Hello World, Friday Sep. 16
 */ 
 
 /* Summary:
