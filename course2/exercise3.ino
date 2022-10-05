@@ -20,6 +20,13 @@ void setup()
 
   // Make sure we can write to pin13.
   pinMode(yellowLED, OUTPUT);
+
+  // If analog input pin 0 is unconnected, random analog
+  // noise will cause the call to randomSeed() to generate
+  // different seed numbers each time the sketch runs.
+  // randomSeed() will then shuffle the random function.
+  // In summary this ensures better randomness when using random().
+  randomSeed(analogRead(0));
 }
 
 void loop()
