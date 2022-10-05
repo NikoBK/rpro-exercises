@@ -28,7 +28,7 @@ void loop
   // the while loop and run all the code inside it.
   while (Serial.available() > 0)
   {
-    digitalWrite(yellowLED, LOW); // Turn of the yellow LED.
+    digitalWrite(yellowLED, LOW); // Turn off the yellow LED.
 
     delay(150); // Remember the delay needed.
     digitalWrite(greenLED, LOW); // Turn the green LED on while inside the while loop.
