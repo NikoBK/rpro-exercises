@@ -3,53 +3,37 @@
 
     Created on: Oct 5, 2022,
     Author: Nikolaj Krebs,
-    Course 02, Exercise 1 - Operation with variables, Friday Sep. 23
+    Lecture 3, Exercise 2 - while, Friday Sep. 30
 */ 
 
-int var1 = 10;
-int var2 = 2;
+int yellowLED = 13; // The pin for the yellow LED.
+int greenLED = 30; // The pin for the green LED.
 
-// Note that the datatype 'int' is only declared once here because all these variables
-// are all ints with no predefined values. We will change these variable values in the code
-// during runtime.
-int addition, subtraction, multiplication, division;
-
-void setup() 
+void setup()
 {
-  // Initialize the serial port:
-  Serial.begin(9600); // 9600 is the frequency for the serial monitor.
+  Serial.begin(9600);
 
-  addition = var1 + var2;
-  subtraction = var1 - var2; // Remember to subtract biggest from smallest. var2 - var1 yields a negative value and var1 - var2 positive.
-  multiplication = var1 * var2;
-  division = var1 / var2; // Do not divide by 0. Same rules apply here as in math.
+  // Make sure we can write to the yellow and green LED pins:
+  pinMode(yellowLED, OUTPUT);
+  pinMode(greenLED, OUTPUT);
 }
 
-void loop() 
-{
-  // Prints all the calculated sums and products on the serial monitor
-  Serial.println("Hello I am Zumo, these are my variables:"); // Our greetings string :)
+void loop
+(
+  digitalWrite(yellowLED, HIGH); // As long as we are not inside the while loop, the yellow LED will be lit, indicating idle station.
+  digitalWrite(greenLED, HIGH); // Turn the green LED off when we are not inside the while loop. Remember; HIGH = off, LOW = on for the green led.
 
-  // Print the var1 and var2 values:
-  Serial.println("var1:");
-  Serial.println(var1);
-  Serial.println("var2:");
-  Serial.println(var2);
+  // Serial.available() returns how many bytes of data there is in the serial monitor buffer.
+  // When you type something in this value will increase and if you wrote anything we will jump inside
+  // the while loop and run all the code inside it.
+  while (Serial.available() > 0)
+  {
+    digitalWrite(yellowLED, LOW); // Turn of the yellow LED.
 
-  // Print the addition, subtraction, multiplication & division values:
-  Serial.println("addition:");
-  Serial.println(addition);
+    delay(150); // Remember the delay needed.
+    digitalWrite(greenLED, LOW); // Turn the green LED on while inside the while loop.
 
-  Serial.println("subtraction:");
-  Serial.println(subtraction);
-
-  Serial.println("multiplication:");
-  Serial.println(multiplication);
-
-  Serial.println("division:");
-  Serial.println(division);
-
-  // Print the closer text, that indicates where the loop stops.
-  Serial.println("------- I will send the variables again each 10 seconds -------");
-  delay(10000); // Wait 10 seconds before restarting the loop.
-}
+    char data = Serial.read(); // Get the text we wrote as a single char.
+    Serial.println(data); // Print the char we just got above.
+  }
+)
