@@ -26,23 +26,27 @@ void loop()
   digitalWrite(yellowLED, LOW); // Turn off the yellow LED.
   digitalWrite(greenLED, HIGH); // The green LED is not like the others. LOW = on and HIGH = off.
 
-  // Make a switch that checks what the input is:
-  switch(input)
+  // Make sure the Serial buffer has any data in it before we read anything.
+  if (Serial.available() > 0)
   {
-    // If the input is the char 'y':
-    case 'Y': // This runs the same code for 'y' if you write a uppercase y 'Y'.
-    case 'y':
-      digitalWrite(yellowLed, HIGH); // Turns the yellow LED on when either a 'y' or 'Y' is received.
-    break;
+    // Make a switch that checks what the input is:
+    switch(input)
+    {
+      // If the input is the char 'y':
+      case 'Y': // This runs the same code for 'y' if you write a uppercase y 'Y'.
+      case 'y':
+        digitalWrite(yellowLed, HIGH); // Turns the yellow LED on when either a 'y' or 'Y' is received.
+      break;
 
-    // If the input is the char 'g':
-    case 'G': // This runs the same code for 'g' if you write a uppercase g 'G'.
-    case 'g':
-      // Add this delay to prevent state override when sending data. 
-      // This is because the tx LED, lights up when data is sent.
-      delay(150); // I just keep the delay as small as possible, 100 ms is the lowest you can go. :)
+      // If the input is the char 'g':
+      case 'G': // This runs the same code for 'g' if you write a uppercase g 'G'.
+      case 'g':
+        // Add this delay to prevent state override when sending data. 
+        // This is because the tx LED, lights up when data is sent.
+        delay(150); // I just keep the delay as small as possible, 100 ms is the lowest you can go. :)
 
-      digitalWrite(greenLED, LOW);
-    break;
+        digitalWrite(greenLED, LOW);
+      break;
+    }
   }
 }
