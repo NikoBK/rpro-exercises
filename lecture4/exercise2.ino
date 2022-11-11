@@ -3,7 +3,7 @@
 
     Created on: Nov 10, 2022,
     Author: Nikolaj Krebs,
-    Lecture 4, Exercise 2 - for loop increasing the iterations, Friday Oct. 28 (moved to Friday Nov. 4)
+    Lecture 4, Exercise 2 - for loop increasing the iterations, Friday Oct. 14
 */ 
 
 int iterations = 2; // How many times we want to iterate. NOTE: We start at 2 and increase this over time.

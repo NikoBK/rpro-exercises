@@ -3,7 +3,7 @@
 
     Created on: Nov 11, 2022,
     Author: Nikolaj Krebs,
-    Lecture 4, Exercise 4 - simple arrays2, Friday Oct. 28 (moved to Friday Nov. 4)
+    Lecture 4, Exercise 4 - simple arrays2, Friday Oct. 14
 */
 
 // Our int array with the default values: 4, 3, 2, 1.

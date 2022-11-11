@@ -3,7 +3,7 @@
 
     Created on: Nov 11, 2022,
     Author: Nikolaj Krebs,
-    Lecture 4, Exercise 3 - simple arrays 1, Friday Oct. 28 (moved to Friday Nov. 4)
+    Lecture 4, Exercise 3 - simple arrays 1, Friday Oct. 14
 */
 
 // int array of 5 values, taken from the lecture exercise slide.

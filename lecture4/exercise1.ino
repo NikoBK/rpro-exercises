@@ -3,7 +3,7 @@
 
     Created on: Nov 10, 2022,
     Author: Nikolaj Krebs,
-    Lecture 4, Exercise 1 - for loop, Friday Oct. 28 (moved to Friday Nov. 4)
+    Lecture 4, Exercise 1 - for loop, Friday Oct. 14
 */ 
 
 int iterations = 10; // How many times we want to iterate.
