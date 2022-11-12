@@ -1,5 +1,5 @@
 /*
-   notes.ino
+   exercise2.ino
 
     Created on: Oct 5, 2022,
     Author: Nikolaj Krebs,
@@ -18,8 +18,8 @@ void setup()
   pinMode(greenLED, OUTPUT);
 }
 
-void loop
-(
+void loop()
+{
   digitalWrite(yellowLED, HIGH); // As long as we are not inside the while loop, the yellow LED will be lit, indicating idle station.
   digitalWrite(greenLED, HIGH); // Turn the green LED off when we are not inside the while loop. Remember; HIGH = off, LOW = on for the green led.
 
@@ -36,4 +36,4 @@ void loop
     char data = Serial.read(); // Get the text we wrote as a single char.
     Serial.println(data); // Print the char we just got above.
   }
-)
+}

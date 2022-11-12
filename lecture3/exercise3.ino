@@ -1,5 +1,5 @@
 /*
-   notes.ino
+   exercise3.ino
 
     Created on: Oct 5, 2022,
     Author: Nikolaj Krebs,
@@ -19,8 +19,8 @@ void setup()
   pinMode(yellowLED, OUTPUT);
 }
 
-void loop
-(
+void loop()
+{
   // As long as the button is not pressed the yellow light is off.
   digitalWrite(yellowLED, LOW);
 
@@ -28,4 +28,4 @@ void loop
   while (aButton.isPressed()) {
     digitalWrite(yellowLED, HIGH); // Turn on the yellow LED.
   }
-)
+}

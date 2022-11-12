@@ -1,5 +1,5 @@
 /*
-   notes.ino
+   exercise1.ino
 
     Created on: Oct 5, 2022,
     Author: Nikolaj Krebs,
@@ -35,7 +35,7 @@ void loop()
       // If the input is the char 'y':
       case 'Y': // This runs the same code for 'y' if you write a uppercase y 'Y'.
       case 'y':
-        digitalWrite(yellowLed, HIGH); // Turns the yellow LED on when either a 'y' or 'Y' is received.
+        digitalWrite(yellowLED, HIGH); // Turns the yellow LED on when either a 'y' or 'Y' is received.
       break;
 
       // If the input is the char 'g':
@@ -49,4 +49,7 @@ void loop()
       break;
     }
   }
+
+  // Wait 2.5 seconds before turning all lights off again.
+  delay(2500);
 }
